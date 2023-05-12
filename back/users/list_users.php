@@ -1,4 +1,5 @@
 <?php include("../config/cnx_db.php"); ?>
+<!--http://127.0.0.1/Market/back/users/list_users.php -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,19 +16,20 @@
             <th>firstName</th>
             <th>LastName</th>
             <th>Email</th>
+            <th>Actions</th>
         <tr>ACCIONES</tr>
         </tr>
         <?php $sql = "SELECT * FROM users";
-        $result = $conm->query($sql);
+        $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                "<tr>";
-                "<td>" . $row['f_name'] . "</td>";
-                "<td>" . $row['l_name'] . "</td>";
-                "<td>" . $row['email'] . "</td>";
-                "<td><a href='edit_user.php?id=" . $row['id'] . "'><img src='../../front/icons/update.png'><a/></a></td>";
-                "<td><a href='delete_user.php?id=" . $row['id'] . "'><img src='../../front/icons/delete.png'</a></td>";
-                "</tr>";
+                echo "<tr>
+                <td>" . $row['f_name'] . "</td>
+                <td>" . $row['l_name'] . "</td>
+                <td>" . $row['email'] . "</td>
+                <td><a href='edit_user.php?id=" . $row['id'] . "'><img src='../../front/icons/update.png'><a/></a></td>
+                <td><a href='delete_users.php?id=" . $row['id'] . "'><img src='../../front/icons/delete.png'</a></td>
+                </tr>";
             }
         }
         ?>

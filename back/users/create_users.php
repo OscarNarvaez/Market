@@ -1,5 +1,5 @@
 <?php
-//create_user.php
+//create_users.php
 // include("../config/cnx_db.php");
 //llamar al servidor creado
 include_once("../config/cnx_db.php");
