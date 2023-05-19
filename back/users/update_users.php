@@ -13,7 +13,7 @@ $result = $conn->query($sql);
 
 if ($conn->query($sql) === TRUE) {
     echo "<script>alert('User has been updated successfully')</script>";
-    header("Refresh:0; url=http://localhost/market/back/users/list_users.php");
+    header("Refresh:0; url=http://localhost/Market/back/users/list_users.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -14,9 +14,9 @@ $sql = "INSERT INTO users (f_name, l_name, email, password) VALUES ('$firtsName'
 
 if ($conn->query($sql) === true) {
     echo "<script>alert('User has been created successfully')</script>";
-    header("Refresh:0; url=http://localhost/market/front/login.html");
+    header("Refresh:0; url=http://localhost/Market/front/login.html");
 } else {
     echo " <script>alert('Email already exist')</script";
-    header("refresh:0; url=http://localhost/market/front/creaete_users.html");
+    header("refresh:0; url=http://localhost/Market/front/create_users.html");
 }
 ?>
