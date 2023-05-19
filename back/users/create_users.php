@@ -17,6 +17,6 @@ if ($conn->query($sql) === true) {
     header("Refresh:0; url=http://localhost/market/front/login.html");
 } else {
     echo " <script>alert('Email already exist')</script";
-    header("refresh:0; url=http://localhost/market/front/creaete_user.html");
+    header("refresh:0; url=http://localhost/market/front/creaete_users.html");
 }
 ?>

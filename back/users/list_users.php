@@ -27,7 +27,7 @@
                 <td>" . $row['f_name'] . "</td>
                 <td>" . $row['l_name'] . "</td>
                 <td>" . $row['email'] . "</td>
-                <td><a href='edit_user.php?id=" . $row['id'] . "'><img src='../../front/icons/update.png'><a/></a></td>
+                <td><a href='edit_users.php?id=" . $row['id'] . "'><img src='../../front/icons/update.png'><a/></a></td>
                 <td><a href='delete_users.php?id=" . $row['id'] . "'><img src='../../front/icons/delete.png'</a></td>
                 </tr>";
             }
