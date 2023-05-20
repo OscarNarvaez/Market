@@ -1,7 +1,4 @@
 <?php
-//create_users.php
-// include("../config/cnx_db.php");
-//llamar al servidor creado
 include_once("../config/cnx_db.php");
 $firtsName = $_POST["f_name"];
 $lastName = $_POST["l_name"];
@@ -9,6 +6,7 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 //colocar los nombres de los campos de la base de datos y luego de los que se coloca en php users
 $sql = "INSERT INTO users (f_name, l_name, email, password) VALUES ('$firtsName','$lastName','$email', '$password')";
+$test = "INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`, `update_at`, `delete_at`) VALUES (NULL, '', '', '', '', current_timestamp(), NULL, NULL)";
 // echo $sql;
 //$conn->query($sql);
 

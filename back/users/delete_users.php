@@ -1,21 +1,17 @@
 <?php
-//Delete https://127.0.0.1/Market/back/users/delete_users.php
-//delete_users.php
-include_once("../config/cnx_db.php");
-$id = $_GET["id"];
-$sql = "DELETE FROM users WHERE id = $id";
-$sqlSerch = "DELETE FROM users WHERE id = $id";
-$result = $conn->query($sqlSerch);
+include('../config/cnx_db.php');
+$userID = $_GET['id'];
+$sql = "DELETE FROM users WHERE id = $userID";
 
-if ($result->num_rows > 0) {
-    if ($conn->query($sql) === true) {
-        echo "<script> alert ('¡User has been deleted successfully!')</script>";
+if ($conn->query($sql) == TRUE) {
+    if ($conn->affected_rows > 0) {
+        echo "<script>alert('user has been delete!')</script>";
         header("refresh:0; url=http://localhost/Market/back/users/list_users.php");
     } else {
-        echo "Error: User has not been deleted.";
+        echo "user doen not exist";
     }
 } else {
-    echo "<script> alert ('¡User does not exist!')</script>";
-    header("refresh:0; url=http://localhost/Market/back/users/list_users.php");
+    echo "Error:User hasnt been delete!";
+    echo "Error: " . $conn->error;
 }
 ?>

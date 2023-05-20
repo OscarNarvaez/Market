@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New users</title>
+  </head>
+
+  <body>
+    <center>
+      <form
+        namme="newUserForm"
+        action="http://localhost/Market/back/users/create_users.php"
+        method="post"
+      >
+        <label>Firstname:</label
+        ><input
+          name="f_name"
+          placeholder="Tom"
+          type="text"
+          required
+        /><br /><br />
+        <label>Lastname:</label
+        ><input
+          name="l_name"
+          type="text"
+          placeholder="Mclister"
+          required
+        /><br /><br />
+        <label>Email:</label
+        ><input
+          name="email"
+          type="email"
+          placeholder="Tom@gmailcom"
+          required
+        /><br /><br />
+        <label>Pasword:</label
+        ><input
+          name="password"
+          type="password"
+          placeholder="******"
+          required
+        /><br /><br />
+        <button>Register</button>
+      </form>
+    </center>
+  </body>
+</html>

@@ -3,14 +3,10 @@
 
 <?php
 include("../config/cnx_db.php");
-
-$userId = $_GET['id'];
 $sql = "SELECT 
              * 
          FROM 
-            users
-         WHERE 
-            id='$userId'";
+            users";
 
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
@@ -23,9 +19,6 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
-
-<!-- --parte 2-- -->
-
 
 <head>
     <meta charset="UTF-8" />
