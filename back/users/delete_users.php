@@ -1,3 +1,4 @@
+<!-- http://localhost/Market/back/users/delete_users.php -->
 <?php
 include('../config/cnx_db.php');
 $userID = $_GET['id'];

@@ -10,11 +10,10 @@ $sql = "UPDATE users SET
         f_name = '$fName',
         l_name = '$lName',
         email = '$email',
-        password = '$password'";
+        password = '$password'
+        ";
 if ($conn->query($sql) === true) {
     header("refresh:0;url=http://localhost/Market/back/users/list_users.php");
 
-} else {
-    echo $conn->error;
 }
 ?>
