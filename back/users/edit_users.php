@@ -28,25 +28,25 @@ if ($result->num_rows > 0) {
 
 <body>
     <center>
-        <form namme="EditUserForm" action="http://localhost/Market/back/users/update_users.php" method="POST">
-            <impunt type="hidden" name="id" value="<?php echo $userId; ?>">
-                <label for="f_name">First Name</label>
-                <input type="text" name="f_name" id="f_name" value="<?php echo $f_name; ?>">
-                <br>
-                <br>
-                <label for="l_name">Last Name</label>
-                <input type="text" name="l_name" id="l_name" value="<?php echo $l_name; ?>">
-                <br>
-                <br>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" value="<?php echo $email; ?>">
-                <br>
-                <br>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" value="<?php echo $pass; ?>">
-                <br>
-                <br>
-                <input type="submit" placeholder="Actualizar Datos" value="Update">
+        <form namme="EditUserForm" action="http://localhost/market/back/users/update_users.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $userId; ?>">
+            <label for="f_name">First Name</label>
+            <input type="text" name="f_name" id="f_name" value="<?php echo $f_name; ?>">
+            <br>
+            <br>
+            <label for="l_name">Last Name</label>
+            <input type="text" name="l_name" id="l_name" value="<?php echo $l_name; ?>">
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" value="<?php echo $email; ?>">
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" value="<?php echo $pass; ?>">
+            <br>
+            <br>
+            <input type="submit" placeholder="Actualizar Datos" value="Update">
         </form>
     </center>
 </body>
