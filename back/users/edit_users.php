@@ -24,6 +24,14 @@ if ($result->num_rows > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
+    <script>
+        function showPasswords() {
+            var passwordInputs = document.getElementsByClassName("user-password");
+            for (var i = 0; i < passwordInputs.length; i++) {
+                passwordInputs[i].type = "text";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -43,11 +51,13 @@ if ($result->num_rows > 0) {
             <br>
             <br>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" value="<?php echo $pass; ?>">
+            <input type="password" class="user-password" name="password" id="password" value="<?php echo $pass; ?>">
             <br>
             <br>
-            <input type="submit" placeholder="Actualizar Datos" value="Update">
+            <input type="submit" placeholder="Actualizar Datos" value="UPDATE">
         </form>
+        <p>
+            <button onclick="showPasswords()">Mostrar Contraseñas</button>
     </center>
 </body>
 

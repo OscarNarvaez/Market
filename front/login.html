@@ -7,28 +7,50 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
 
+    <script>
+      function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var toggleButton = document.getElementById("toggleButton");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleButton.textContent = "Hide Password";
+        } else {
+          passwordInput.type = "password";
+          toggleButton.textContent = "Show Password";
+        }
+      }
+    </script>
   </head>
-  <body >
+  <body>
     <h1>Login Users</h1>
     <center>
-  <form name="formLogin" 
-  action="http://localhost/market/back/users/login_singin.php"
-   method="POST">   
-    <p>
-      <label>Email User  </label><input type="text" name="f_name" required >
-    </p>
-    <p>
-      <label>Password  </label><input type="password" name="password" required >
-    </p>
-    <button class="singIn">Sing In</button><br /><br>
- </form>
-    <a href="http://localhost/market/front/create_users.html">Sign up</a
+      <form
+        name="formLogin"
+        action="http://localhost/market/back/users/login_singin.php"
+        method="POST"
+      >
+        <p>
+          <label>Email User:  </label
+          ><input type="text" name="f_name" required />
+        </p>
+        <p>
+          <label>Password:  </label
+          ><input type="password" name="password" id="password" required />
+          <button type="button" id="toggleButton" onclick="togglePasswordVisibility()">
+            Show Password
+          </button>
+        </p>
+        <button class="singIn">Sign In</button><br /><br />
+      </form>
+      <a href="http://localhost/market/front/create_users.html">Sign up</a
       ><br /><br />
-   <a href="http://localhost/market/front/login.html">Forgot your password?</a>
-   <p>
-    <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" frameBorder="0"></iframe></div>
-   </p>
-    
-  
+      <a href="http://localhost/market/front/login.html">Forgot your password?</a>
+      <p>
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
+          <iframe src="https://giphy.com/embed/iIqmM5tTjmpOB9mpbn" frameBorder="0"></iframe>
+        </div>
+      </p>
+    </center>
   </body>
 </html>

@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New users</title>
     <link rel="stylesheet" href="styles/style.css" />
+
+    <script>
+      function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        var toggleButton = document.getElementById("toggleButton");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleButton.textContent = "Ocultar Contraseña";
+        } else {
+          passwordInput.type = "password";
+          toggleButton.textContent = "Mostrar Contraseña";
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -13,40 +28,48 @@
       <br />
       <h1>New Users</h1>
       <form
-        namme="newUserForm"
+        name="newUserForm"
         action="http://localhost/market/back/users/create_users.php"
         method="post"
       >
-        <label>Firstname:</label
-        ><input
-          name="f_name"
-          placeholder="Tom"
-          type="text"
-          required
-        /><br /><br />
-        <label>Lastname:</label
-        ><input
-          name="l_name"
-          type="text"
-          placeholder="Mclister"
-          required
-        /><br /><br />
-        <label>Email:</label
-        ><input
-          name="email"
-          type="email"
-          placeholder="Tom@gmailcom"
-          required
-        /><br /><br />
-        <label>Pasword:</label
-        ><input
-          name="password"
-          type="password"
-          placeholder="******"
-          required
-        /><br /><br />
-        <button class="registerButton">Register</button>
+        <label>Firstname:</label>
+        <input name="f_name" placeholder="Tom" type="text" required />
+        <p>
+          <label>Lastname:</label>
+          <input name="l_name" type="text" placeholder="Mclister" required />
+        </p>
+
+        <p>
+          <label>Email:</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="Tom@gmail.com"
+            required
+          />
+        </p>
+
+        <p>
+          <label>Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="******"
+            required
+          />
+          <button type="button" onclick="togglePasswordVisibility()">
+            <span id="toggleButton">Mostrar Contraseña</span>
+          </button>
+        </p>
+
+        <p>
+          <button>
+            <input type="submit" id="registerButton" value="Register" />
+          </button>
+        </p>
       </form>
+
       <p>
         <img src="https://thumbs.gfycat.com/AgedSplendidDodo-max-1mb.gif" />
       </p>
